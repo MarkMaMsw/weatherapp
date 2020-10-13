@@ -1,6 +1,7 @@
 import React from 'react';
-import CityWeather from './CityWeather'
-import Twitter from './Twitter'
+import CityWeather from './CityWeather';
+// import TwitterFeed from './TwitterFeed';
+import ForcastList from './ForcastList';
 
 class Main extends React.Component {
     constructor(){
@@ -28,11 +29,11 @@ class Main extends React.Component {
                     {/* <h1>{this.state.city}</h1> */}
                 </div>
                 <div className="card__details">
-                    <div className="card__details_left">
-                        <Twitter city={this.state.city} key={this.state.city}/>
-                    </div>
+                    {/* <div className="card__details_left">
+                        <TwitterFeed city={this.state.city} key={this.state.city}/>
+                    </div> */}
                     <div className="card__details_right">
-                        {/* <ForcastList/> */}
+                        <ForcastList cityname={this.state.city} key={this.state.city}/>
                     </div>
                 </div>
             </div>

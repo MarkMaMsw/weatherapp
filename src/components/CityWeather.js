@@ -60,7 +60,7 @@ class CityWeather extends React.Component{
         return <>
         <div className="card__main__left">
             <div className="card__main__lefttop">
-                <h1>{this.state.temp}&#176;</h1>
+                {this.state.temp && <h1>{this.state.temp}&#176;</h1>}
                 <img src={`http://openweathermap.org/img/wn/${this.state.iconWeather}@2x.png`} alt="weather icon"></img>
                 <h3>{this.state.mainWeather}</h3>
             </div>
